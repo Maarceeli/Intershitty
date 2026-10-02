@@ -1,0 +1,63 @@
+[versions]
+chucker = "4.3.1"
+composeMaterialSymbols = "1.1.6"
+jsoup = "1.23.2"
+ktor = "3.6.0"
+accompanist = "0.37.3"
+agp = "9.3.3"
+coreKtx = "1.19.1"
+lifecycleRuntimeKtx = "2.11.0"
+activityCompose = "1.13.0"
+kotlin = "2.4.20"
+composeBom = "2026.09.00"
+jetbrainsKotlinJvm = "2.4.20"
+kotlinxSerialization = "1.11.0"
+navigation3Ui = "1.2.0"
+koin-bom = "4.2.2"
+koin-plugin = "1.2.1"
+room3Runtime = "3.0.3"
+kotlin-ksp = "2.3.9"
+material3 = "1.5.0-alpha29"
+foundationLayout = "1.12.1"
+kotlinx-datetime = "0.8.0"
+
+[libraries]
+chucker-library = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
+chucker-library-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chucker" }
+compose-material-symbols = { module = "dev.vicart:compose-material-symbols", version.ref = "composeMaterialSymbols" }
+jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-room3-compiler = { module = "androidx.room3:room3-compiler", version.ref = "room3Runtime" }
+androidx-room3-runtime = { module = "androidx.room3:room3-runtime", version.ref = "room3Runtime" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "navigation3Ui" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "foundationLayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+koin-compiler = { id = "io.insert-koin.compiler.plugin", version.ref = "koin-plugin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "kotlin-ksp" }
+androidx-room3 = { id = "androidx.room3", version.ref = "room3Runtime" }
+

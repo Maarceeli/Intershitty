@@ -1,0 +1,127 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "b5640e8faad4104c156170b0e2c27970",
+    "entities": [
+      {
+        "tableName": "account",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `accessToken` TEXT NOT NULL, `refreshToken` TEXT NOT NULL, `expiresIn` INTEGER NOT NULL, `generatedOn` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accessToken",
+            "columnName": "accessToken",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "refreshToken",
+            "columnName": "refreshToken",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "expiresIn",
+            "columnName": "expiresIn",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "generatedOn",
+            "columnName": "generatedOn",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "ticket",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ticketId` TEXT NOT NULL, `sections` TEXT NOT NULL, `price` REAL NOT NULL, `overallDepartureStation` TEXT NOT NULL, `overallArrivalStation` TEXT NOT NULL, `validFrom` TEXT NOT NULL, `validTo` TEXT NOT NULL, `controlCode` TEXT NOT NULL, `ownerName` TEXT NOT NULL, `ticketCode` TEXT NOT NULL, PRIMARY KEY(`ticketId`))",
+        "fields": [
+          {
+            "fieldPath": "ticketId",
+            "columnName": "ticketId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sections",
+            "columnName": "sections",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "overallDepartureStation",
+            "columnName": "overallDepartureStation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "overallArrivalStation",
+            "columnName": "overallArrivalStation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "validFrom",
+            "columnName": "validFrom",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "validTo",
+            "columnName": "validTo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "controlCode",
+            "columnName": "controlCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ownerName",
+            "columnName": "ownerName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ticketCode",
+            "columnName": "ticketCode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ticketId"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b5640e8faad4104c156170b0e2c27970')"
+    ]
+  }
+}
